@@ -1,0 +1,106 @@
+.item {
+    border: 1px solid rgba(153, 153, 153, 0.466);
+    padding: 1rem;
+
+    display: grid;
+    justify-items: center;
+    align-items: flex-ends;
+    grid-template-rows: 250px;
+    grid-row-gap: 1.5rem;
+
+    position: relative;
+}
+
+.item__detail {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    scale: 0.9;
+    transition: scale 3s;
+}
+
+.item:hover .item-img {
+    scale: 1;
+}
+
+
+/* -------- icon  ------ */
+.item button {
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item__btn--heart {
+    height: 3rem;
+    width: 3rem;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 2px rgba(49, 49, 49, 0.11);
+
+    position: absolute;  /* relative to item */
+    top: 1rem;
+    right: 1rem;
+}
+
+.item__icon-heart {
+    height: 1.9rem;
+    width: 1.9rem;
+    fill: #081828;
+}
+
+/* ------------------- */
+.item__btn--cart {
+    padding: .5rem 1rem .5rem .5rem;
+    background-color: #ff6b81de;
+
+    justify-self: stretch;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.item__icon-cart {
+    height: 3.2rem;
+    width: 3.2rem;
+    fill: #fff;
+
+    transition: all .2s;
+}
+
+.item__btn--invisible {
+    color: #fff;
+    font-size: 1.5rem;
+    display: inline-block;
+
+    position: absolute;
+    transform: translateY(-120%);
+    transition: all .2s;
+}
+
+.item__btn--cart:hover .item__icon-cart {
+    transform: translateY(120%);
+}
+.item__btn--cart:hover .item__btn--invisible {
+    transform: translateY(0);
+}
+
+/* ------------------------------ */
+.detail {
+    font-size: 1.8rem;
+    color: #081828;
+}
+
+.price {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+}

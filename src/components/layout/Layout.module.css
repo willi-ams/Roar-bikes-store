@@ -1,0 +1,12 @@
+header {
+    background-color: #ff6b81;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2;
+}
+
+footer {
+    background-color: #081828;
+}

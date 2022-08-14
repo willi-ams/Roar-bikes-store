@@ -1,0 +1,72 @@
+.nav {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+    margin: 0;
+}
+
+.nav ul a {    
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav ul li:not(:last-child) {
+    margin-right: 2.5rem;
+}
+
+.nav ul a:hover,
+.nav ul a:active,
+.nav ul a.active {
+    /* 081828 */
+    color: #081828a4;
+    transition: color .5s;
+}
+
+
+
+
+/* -------- icon syling   ------- */
+.user-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.user-btn:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.nav-icon {
+    height: 2.3rem;
+    width: 2.3rem;
+    fill: #fff;
+}
+
+.nav-icon__notification {
+    position: absolute;
+    color: #fff;
+    font-size: 1.4rem;
+    transform: translateY(-7px);
+}
