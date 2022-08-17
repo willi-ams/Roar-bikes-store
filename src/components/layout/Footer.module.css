@@ -3,7 +3,7 @@
     margin: 0 auto;
 
     color: #D2D6DC ;
-    padding: 10rem 2rem;
+    padding: 10rem 2rem 7rem 2rem;
 
     display: flex;
     justify-content: space-between;
@@ -51,4 +51,21 @@
 
 .footer-text {
     font-size: 1.4rem;
+}
+
+/* ---------------- */
+.footer-copywright {
+    border-top: 2px solid rgba(238, 238, 238, 0.171);
+}
+
+.content {
+    max-width: 114rem;
+    margin: 0 auto;
+    
+    padding: 2rem 2rem;
+    color: #D2D6DC;
+}
+
+.footer-copywright p {
+    font-size: 15px;
 }

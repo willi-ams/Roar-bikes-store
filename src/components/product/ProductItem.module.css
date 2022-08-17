@@ -36,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .item__btn--heart {
@@ -82,12 +83,12 @@
     display: inline-block;
 
     position: absolute;
-    transform: translateY(-120%);
+    transform: translateY(-160%);
     transition: all .2s;
 }
 
 .item__btn--cart:hover .item__icon-cart {
-    transform: translateY(120%);
+    transform: translateY(160%);
 }
 .item__btn--cart:hover .item__btn--invisible {
     transform: translateY(0);
@@ -97,6 +98,7 @@
 .detail {
     font-size: 1.8rem;
     color: #081828;
+    font-weight: 500;
 }
 
 .price {

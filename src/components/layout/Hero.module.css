@@ -1,0 +1,9 @@
+.hero {
+    height: 500px;
+    margin-top: 7rem;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.707), rgba(0, 0, 0, 0.707)), url('../../assets/orange-big.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,11 +1,25 @@
 import { Link } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { cartActions } from '../../store/cart-slice';
+import { useSelector } from 'react-redux';
 
 import icon from '../../assets/sprite.svg';
-// import img from '../../assets/image-road1.png';
 import classes from './ProductItem.module.css';
 
 
 const ProductItem = (props) => {
+    const dispatch = useDispatch();
+    const { id, img, description, price } = props;
+
+    const addToCartHandler = () => {
+        dispatch(cartActions.addItemToCart({
+            id,
+            img,
+            description,
+            price,
+            amount: 1
+        }));
+    }
 
     return (
         <div className={classes.item}>
@@ -19,7 +33,7 @@ const ProductItem = (props) => {
                 </svg>
             </button>
 
-            <button className={classes['item__btn--cart']}>
+            <button className={classes['item__btn--cart']} onClick={addToCartHandler}>
                 <svg className={classes['item__icon-cart']}>
                     <use xlinkHref={`${icon}#icon-shopping-cart`} />
                 </svg>

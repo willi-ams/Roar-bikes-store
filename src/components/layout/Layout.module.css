@@ -1,5 +1,5 @@
 header {
-    background-color: #ff6b81;
+    background-color: var(--color-primary);
     width: 100%;
     top: 0;
     left: 0;
@@ -8,5 +8,5 @@ header {
 }
 
 footer {
-    background-color: #081828;
+    background-color: var(--color-secondary);
 }

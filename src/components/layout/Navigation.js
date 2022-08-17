@@ -2,8 +2,9 @@ import { NavLink } from 'react-router-dom';
 
 import styles from './Navigation.module.css';
 import icons from "../../assets/sprite.svg";
+import CartButton from '../UI/CartButton';
 
-const Navigation = () => { 
+const Navigation = (props) => { 
 
     return (
         <nav className={styles.nav}>
@@ -31,12 +32,7 @@ const Navigation = () => {
                     <span className={styles['nav-icon__notification']}>0</span>
                 </button>
 
-                <button className={styles['user-btn']}>
-                    <svg className={styles['nav-icon']}>
-                        <use xlinkHref={`${icons}#icon-shopping-cart`} />
-                    </svg>
-                    <span className={styles['nav-icon__notification']}>0</span>
-                </button>
+                <CartButton onClick={props.onShowCart} />
             </div>
         </nav>
     );

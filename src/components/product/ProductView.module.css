@@ -1,0 +1,59 @@
+.product-view {
+    margin: 15rem auto 10rem auto;
+    max-width: 114rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5rem;
+}
+
+.product-view img {
+    width: 100%;
+}
+
+.product-view h2 {
+    font-size: 3rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-bottom: .5rem;
+
+}
+
+.product-view .price {
+    font-size: 2.3rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+/* -------------------------------- */
+.wishlist-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    margin-top: 2.2rem;
+}
+
+.wishlist-btn:hover svg {
+    fill: var(--color-primary);
+}
+
+.wishlist-btn:hover .span-text {
+    color: var(--color-primary);
+}
+
+.wishlist-icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-secondary);
+    margin-right: 1.5rem;
+}
+
+.span-text {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
