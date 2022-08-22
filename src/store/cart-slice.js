@@ -24,19 +24,34 @@ const cartSlice = createSlice({
                     quantity: newItem.amount  // 1st time one quantity
                 });
             } else {
-                existingItem.quantity = existingItem.quantity + newItem.amount; // here we are updating the previous state item quantity also.
+                existingItem.quantity += newItem.amount; // here we are updating the previous state item quantity also.
                 existingItem.itemTotalPrice = (existingItem.price * existingItem.quantity); // update d price of d existing item
             }
 
-            state.totalAmount = state.totalAmount + action.payload.price * action.payload.amount;
+            state.totalAmount += (action.payload.price * action.payload.amount);
+        },
+        removeItemQuantityFromCart(state, action) {
+            state.totalQuantity -= 1;
+            const id = action.payload;   
+            const item = state.items.find(curItem => curItem.id === id);  // finds d cart item with d current id
+
+            if (item.quantity === 1) {
+                state.items = state.items.filter(curItem => curItem.id !== id);
+            } else {
+                item.quantity -= 1;
+                item.itemTotalPrice -= item.price;
+            }
+
+            state.totalAmount -= item.price;
         },
         removeItemFromCart(state, action) {
             const id = action.payload;
-            const existingItem = state.items.find(curItem => curItem.id === id);
+            const item = state.items.find(curItem => curItem.id === id);
             
-            state.totalQuantity -= existingItem.quantity;
-            state.totalAmount -= (existingItem.price * existingItem.quantity);
-            state.items = state.items.filter(curItem => curItem.id !== id);
+            state.totalQuantity -= item.quantity;
+            // state.totalAmount -= (item.price * item.quantity);
+            state.totalAmount -= item.itemTotalPrice;  // gets d updated total amount by subtracting d totalAmount with the itemTotalPrice
+            state.items = state.items.filter(curItem => curItem.id !== id);  // remove the selected item
         },
 
     }
