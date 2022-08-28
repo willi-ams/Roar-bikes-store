@@ -19,11 +19,11 @@ const CartItem = (props) => {
                 <img src={props.img} alt="img" />
             </div>
             <div className={classes["item-content"]}>
-                <Link to={props.id} className={classes['content']}>
+                <Link to={props.id} className={classes['content']} onClick={props.onClick}>
                     <h4>{props.description}</h4>
                     <div className={classes['content-box']}>
                         <span className={classes['content-quantity']}>{props.quantity} x</span>
-                        <span className={classes['content-amount']}>${props.itemTotalPrice}</span>
+                        <span className={classes['content-amount']}>${props.price}</span>
                     </div>
                 </Link>
                 <button className={classes["cancel-btn"]} onClick={removeFromCartHandler}>

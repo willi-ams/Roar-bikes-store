@@ -13,7 +13,8 @@
 
 .product-view h2 {
     font-size: 3rem;
-    color: var(--color-secondary);
+    /* color: var(--color-secondary); */
+    color: #2D2A2A;
     font-weight: 600;
     margin-bottom: .5rem;
 

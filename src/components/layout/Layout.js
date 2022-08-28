@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react';
+import { useSelector } from 'react-redux/es/exports';
 
 import Cart from '../cart/Cart';
 import Navigation from './Navigation';
@@ -6,19 +7,22 @@ import Footer from './Footer' ;
 import styles from './Layout.module.css';
 
 const Layout = (props) => {
-    const [cartIsShown, setCartIsShown] = useState(false);
+    const cartPageIsActive = useSelector(state => state.cartModal.cartPageIsActive);
+    
+    const [cartIsClicked, setCartIsClicked] = useState(false);
 
     const showCartHandler = () => {
-        setCartIsShown(true);
+        if (cartPageIsActive) return;
+        setCartIsClicked(true);
     };
 
     const hideCartHandler = () => {
-        setCartIsShown(false)
+        setCartIsClicked(false)
     };
-
+  
     return (
         <Fragment>
-            {cartIsShown && <Cart onClose={hideCartHandler} />}
+            {cartIsClicked && !cartPageIsActive && <Cart onClose={hideCartHandler} />}
             <header className={styles.header}>
                 <Navigation onShowCart={showCartHandler} />
             </header>
@@ -28,7 +32,7 @@ const Layout = (props) => {
             <footer>
                 <Footer />
             </footer>
-      </Fragment>
+        </Fragment>
     );
 }
 

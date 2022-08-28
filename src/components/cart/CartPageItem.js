@@ -10,6 +10,8 @@ const CartPageItem = (props) => {
 
     const { id, img, itemTotalPrice, price, quantity, description } = props;
 
+    const formattedItemTotalPrice = itemTotalPrice.toLocaleString();
+
     const addItemHandler = () => {
         dispatch(cartActions.addItemToCart({
             id,
@@ -56,7 +58,7 @@ const CartPageItem = (props) => {
                 </div>
             </td>
             <td>
-                <p className={classes['total-price']}>${itemTotalPrice}</p>
+                <p className={classes['total-price']}>${formattedItemTotalPrice}</p>
             </td>
         </tr>
     );

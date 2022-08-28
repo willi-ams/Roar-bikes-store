@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import CartPageTotals from './CartPageTotals';
+import CartPageEmpty from './CartPageEmpty';
 
 import CartPageItem from './CartPageItem';
 import classes from './CartPage.module.css';
@@ -7,12 +8,11 @@ import classes from './CartPage.module.css';
 const CartPage = () => {
   const cartItems = useSelector((state) => state.cart.items);
 
-  // if (cartItems.length === 0) {
-
-  //   return (
-  //     <
-  //   )
-  // }
+  if (cartItems.length === 0) {
+    return (
+      <CartPageEmpty />
+    )
+  };
 
   return (
     <section className={classes["section__cart--page"]}>

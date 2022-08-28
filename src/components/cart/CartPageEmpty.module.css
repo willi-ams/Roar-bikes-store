@@ -1,0 +1,40 @@
+.cart-empty {
+    max-width: 114rem;
+    margin: 17rem auto 15rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-nocart {
+    fill: #adadad69;
+    width: 20rem;
+    height: 20rem;
+}
+
+.cart-empty h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #2d2a2a;
+}
+
+.text-box {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.cart-empty p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #777;
+}
+
+.cart-empty a {
+    padding: 1.3rem 2.5rem;
+    background-color: var(--color-primary);
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.4rem;
+}

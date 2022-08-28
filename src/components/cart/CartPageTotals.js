@@ -6,13 +6,15 @@ import classes from "./CartPageTotals.module.css";
 const CartPageTotals = () => {
     const cartTotal = useSelector(state => state.cart.totalAmount);
 
+    const formatCartTotal = cartTotal.toLocaleString();
+
     return (
         <div className={classes["cart-totals"]}>
             <h1>Cart Totals</h1>
 
             <div className={classes["total-box"]}>
                 <h3>Subtotal</h3>
-                <span className={classes.price}>${cartTotal}</span>
+                <span className={classes.price}>${formatCartTotal}</span>
             </div>
 
             <div className={classes["shipping-box"]}>
@@ -35,7 +37,7 @@ const CartPageTotals = () => {
 
             <div className={classes.total}>
                 <h3>Total</h3>
-                <span className={classes.price}>${cartTotal}</span>
+                <span className={classes.price}>${formatCartTotal}</span>
             </div>
 
             <Link to='' className={classes['btn-checkout']}>Proceed to Checkout</Link>

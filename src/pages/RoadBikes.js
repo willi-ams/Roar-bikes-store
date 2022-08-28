@@ -4,16 +4,15 @@ import ProductData from '../components/delete/ProductData';
 
 
 const RoadBikes = () => {
+  const DUMMY_ITEMS = ProductData.filter(curProduct => curProduct.type === 'rb');
 
-    const DUMMY_ITEMS = ProductData.filter(curProduct => curProduct.type === 'rb');
-
-    return (
-      <ProductList
-        products={DUMMY_ITEMS}
-        isCollection={false}
-        text={'Road Bikes'}
-      />
-    );
+  return (
+    <ProductList
+      products={DUMMY_ITEMS}
+      isCollection={'page'}
+      text={'Road Bikes'}
+    />
+  );
 };
 
 export default RoadBikes;

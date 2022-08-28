@@ -15,7 +15,7 @@ const ProductData = [
         description: 'Second Road Bike Item',
         price: 250,
         type: 'rb',
-        collection: 'none'
+        collection: 'optional'
     },
     {
         id: 'm3',
@@ -49,7 +49,7 @@ const ProductData = [
     description: "Second Road Bike Item",
     price: 250,
     type: "mb",
-    collection: "none",
+    collection: "optional",
   },
   {
     id: "m8",
@@ -112,7 +112,7 @@ const ProductData = [
     description: "Fourth Road Bike Item",
     price: 200,
     type: "fb",
-    collection: "none",
+    collection: "optional",
   },
   {
     id: "m15",

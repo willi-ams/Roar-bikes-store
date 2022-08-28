@@ -10,7 +10,9 @@ import CartItem from "./CartItem";
 const Cart = (props) => {
     const cartItems = useSelector(state => state.cart.items);
     const catrTotalAmount = useSelector((state) => state.cart.totalAmount);
-    console.log(cartItems);
+    // console.log(cartItems);
+    
+    const formattedCartTotal = catrTotalAmount.toLocaleString();
 
     return (
       <Modal onClose={props.onClose}>
@@ -34,6 +36,7 @@ const Cart = (props) => {
                 price={curItem.price}
                 itemTotalPrice={curItem.itemTotalPrice}
                 quantity={curItem.quantity}
+                onClick={props.onClose}
               />
             ))}
           </ul>
@@ -54,10 +57,10 @@ const Cart = (props) => {
           <div className={classes.total}>
             <div className={classes["total--box"]}>
               <h3>Subtotal:</h3>
-              <span>${catrTotalAmount}</span>
+              <span>${formattedCartTotal}</span>
             </div>
-            <Link to="/cart">View Cart</Link>
-            <Link to="/checkout">Checkout</Link>
+            <Link onClick={props.onClose} to="/cart">View Cart</Link>
+            <Link onClick={props.onClose} to="/checkout">Checkout</Link>
           </div>
         )}
       </Modal>
