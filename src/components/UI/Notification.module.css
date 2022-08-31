@@ -1,0 +1,60 @@
+.notification {
+    display: flex;
+    align-items: center;
+
+    height: 40px;
+}
+
+.error {
+    background-color: #c62828;
+}
+
+.success {
+    background-color: var(--color-secondary);
+}
+
+.icon-check {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #fff;
+    margin-right: 2rem;
+}
+
+.cart-detail-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+}
+
+.cart-detail-box p {
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* --------------- */
+.button-box {
+    flex: 0 0 8%;
+}
+
+.icon-box {
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: 100px;
+    display: inline-block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.iconx {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: var(--color-secondary);
+}

@@ -27,3 +27,18 @@ body {
     line-height: 1.6;
     font-weight: 300;
 }
+
+.centered {
+    margin: 15rem auto;
+    max-width: 114rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #2a2d2d;
+    padding: 2rem 0;
+}

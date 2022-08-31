@@ -1,13 +1,19 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from '../../store/cart-slice';
 
+import ProductItemSpinner from '../UI/ProductItemSpinner';
 import icon from '../../assets/sprite.svg';
 import classes from './ProductItem.module.css';
 
 
 const ProductItem = (props) => {
+    const [isLoading, setIsloading] = useState(false);
+
     const dispatch = useDispatch();
+    const notification = useSelector(state => state.cartModal.notification);
+    
     const { id, img, description, price } = props;
 
     const addToCartHandler = () => {
@@ -18,7 +24,16 @@ const ProductItem = (props) => {
             price,
             amount: 1
         }));
-    }
+        setIsloading(true);
+    };
+
+    useEffect(() => {
+
+        if (notification) {  // notification is falsy by (default) in the redux store
+            setIsloading(false);
+        };
+
+    }, [notification]);
 
     return (
         <div className={classes.item}>
@@ -33,10 +48,11 @@ const ProductItem = (props) => {
             </button>
 
             <button className={classes['item__btn--cart']} onClick={addToCartHandler}>
-                <svg className={classes['item__icon-cart']}>
+                {!isLoading && <svg className={classes['item__icon-cart']}>
                     <use xlinkHref={`${icon}#icon-shopping-cart`} />
-                </svg>
-                <span class={classes['item__btn--invisible']}>ADD TO CART</span>
+                </svg>}
+                {!isLoading && <span class={classes['item__btn--invisible']}>ADD TO CART</span>}
+                {isLoading && <ProductItemSpinner />}
             </button>
 
             <h3 className={classes.detail}>{props.description}</h3>

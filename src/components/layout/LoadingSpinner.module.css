@@ -1,0 +1,14 @@
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.loader {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    border-top: 12px solid #2d2a2a;
+    border-left: 12px solid #2d2a2a;
+    border-right: 12px solid #2d2a2a00;
+
+    animation: spin 0.575s infinite linear;
+};

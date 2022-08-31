@@ -2,13 +2,17 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cartModalSlice = createSlice({
     name: 'cartModal',
-    initialState: { cartPageIsActive: null },
+    initialState: { cartPageIsActive: null, notification: null },
     reducers: {
         setDisplayTrue(state) {
             state.cartPageIsActive = false;
         },
         setDisplayFalse(state) {
             state.cartPageIsActive = true;
+        },
+        setNotification (state, action) {
+            state.notification = action.payload;
+            console.log(action.payload);
         }
     }
 });

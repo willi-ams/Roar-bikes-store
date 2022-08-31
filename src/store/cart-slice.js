@@ -5,13 +5,20 @@ const cartSlice = createSlice({
     initialState: {
         items: [],
         totalQuantity: 0,
-        totalAmount: 0
+        totalAmount: 0,
+        changed: false
     },
     reducers: {
+        replaceCart(state, action) {  // runs when d page loads for d first time to get d cart data. if we have some stored
+            state.items = action.payload.items;
+            state.totalQuantity = action.payload.totalQuantity;
+            state.totalAmount = action.payload.totalAmount;
+        },
         addItemToCart(state, action) {
             state.totalQuantity += action.payload.amount;
             const newItem = action.payload;
             const existingItem = state.items.find(curItem => curItem.id === newItem.id);  // returns d value of d item if it exist, otherwise undefined
+            state.changed = true;
 
             if (!existingItem) {  // if d item does not exist (undefined)
                 state.items.push({
@@ -34,6 +41,7 @@ const cartSlice = createSlice({
             state.totalQuantity -= 1;
             const id = action.payload;   
             const item = state.items.find(curItem => curItem.id === id);  // finds d cart item with d current id
+            state.changed = true;
 
             if (item.quantity === 1) {
                 state.items = state.items.filter(curItem => curItem.id !== id);
@@ -47,6 +55,7 @@ const cartSlice = createSlice({
         removeItemFromCart(state, action) {
             const id = action.payload;
             const item = state.items.find(curItem => curItem.id === id);
+            state.changed = true;
             
             state.totalQuantity -= item.quantity;
             // state.totalAmount -= (item.price * item.quantity);
