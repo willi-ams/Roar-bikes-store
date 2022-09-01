@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import ProductItem from './ProductItem';
 
 import classes from './ProductList.module.css';
+import ProductItem from './ProductItem';
+
 
 
 const ProductList = (props) => {

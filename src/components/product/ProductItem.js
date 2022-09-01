@@ -1,3 +1,5 @@
+import classes from './ProductItem.module.css';
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
@@ -5,7 +7,6 @@ import { cartActions } from '../../store/cart-slice';
 
 import ProductItemSpinner from '../UI/ProductItemSpinner';
 import icon from '../../assets/sprite.svg';
-import classes from './ProductItem.module.css';
 
 
 const ProductItem = (props) => {
