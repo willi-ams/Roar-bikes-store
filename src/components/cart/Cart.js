@@ -1,9 +1,10 @@
+import classes from "./Cart.module.css";
+
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import Modal from "../UI/Modal";
 import icon from "../../assets/sprite.svg";
-import classes from "./Cart.module.css";
 import CartItem from "./CartItem";
 
 
