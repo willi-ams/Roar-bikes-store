@@ -1,7 +1,7 @@
 .nav {
-    max-width: 120rem;
+    max-width: 114rem;
     margin: 0 auto;
-    padding: 1rem 3rem;
+    padding: 1rem 0;
     color: #fff;
 
     display: flex;
@@ -46,6 +46,28 @@
 
 
 /* -------- icon syling   ------- */
+.menu-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+    display: none;
+}
+
+.menu-btn span {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.menu-icon {
+    height: 2.7rem;
+    width: 2.7rem;
+    fill: #fff;
+    margin-right: .6rem;
+}
+
 .user-btn {
     background-color: transparent;
     border: none;
@@ -69,4 +91,25 @@
     color: #fff;
     font-size: 1.4rem;
     transform: translateY(-7px);
+}
+
+@media only screen and (max-width: 1200px) {
+    .nav {
+        padding: 1rem 2.3rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav ul {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav .user-icons-box button:not(:last-child) {
+        display: none;
+    }
 }

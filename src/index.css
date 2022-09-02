@@ -5,6 +5,7 @@
     --color-secondary: #081828;
 
     --body-text: #888888;
+    --transparent: transparent;
 }
 
 *,
@@ -46,4 +47,11 @@ body {
     font-weight: 400;
     color: #2a2d2d;
     padding: 2rem 0;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        padding: 0 2.3rem;
+    }
 }

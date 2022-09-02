@@ -54,3 +54,39 @@
         transform: translateX(0);
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .modal {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .modal {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .modal {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .modal {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .modal {
+        width: 80%;
+    }
+}
