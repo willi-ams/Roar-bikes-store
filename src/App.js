@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import ScrollToTop from "./ScrollToTop";
 import LoadingSpinner from "./components/layout/LoadingSpinner";
@@ -25,6 +25,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path=":productId" element={<ProductDetail />} />
 
+            <Route path="/shop" element={<Navigate to="/road-bikes" replace/>} />
             <Route path="/road-bikes" element={<RoadBikes />} />
             <Route path="/mountain-bikes" element={<MountainBikes />} />
             <Route path="/folding-bikes" element={<FoldingBikes />} />

@@ -1,9 +1,36 @@
 .hero {
-    height: 500px;
+    padding: 4rem 0;
     margin-top: 7rem;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.707), rgba(0, 0, 0, 0.707)), url('../../assets/orange-big.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.hero-box {
+    padding: 2rem 3rem 3rem 3rem;
+    background-color: #fff;
+    width: 40%;
+    height: 90%;
+    border-radius: 2rem;
+}
+
+.hero-box h1 {
+    font-size: 4rem;
+    color: #2d2a2a;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.hero-box a {
+    text-decoration: none;
+    margin-top: 1.5rem;
+    padding: 1rem 3rem;
+    background-color: var(--color-secondary);
+    color: #fff;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
 }

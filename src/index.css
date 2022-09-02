@@ -28,6 +28,11 @@ body {
     font-weight: 300;
 }
 
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
 .centered {
     margin: 15rem auto;
     max-width: 114rem;
