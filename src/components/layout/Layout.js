@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 
-import styles from './Layout.module.css';
 import Cart from '../cart/Cart';
 import Navigation from './Navigation';
 import Notification from '../UI/Notification';
@@ -10,6 +9,7 @@ import { cartModalActions } from '../../store/cart-modal-slice';
 import { sendCartData } from '../../store/cart-actions';
 import { getCartData } from '../../store/cart-actions';
 import MobileNavigation from './MobileNavigation';
+import styles from './Layout.module.css';
 
 let isInitial = true;
 
