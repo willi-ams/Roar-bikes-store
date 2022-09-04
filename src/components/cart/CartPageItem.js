@@ -32,32 +32,32 @@ const CartPageItem = (props) => {
 
     return (
         <tr className={classes["cart-item"]}>
-            <td>
+            <td className={classes['cancel-btn-box']}>
                 <button onClick={removeWholeItemHandler}>
                     <svg className={classes["cancel-icon"]}>
                         <use xlinkHref={`${cancelIcon}#icon-x`} />
                     </svg>
                 </button>
             </td>
-            <td>
+            <td className={classes['img-link-box']}>
                 <div className={classes['img-link']}>
                     <img src={img} alt={description} />
                 </div>
             </td>
             <td className={classes['description-box']}>
-                <Link to={id}>{description}</Link>
+                <Link to={`/${id}`}>{description}</Link>
             </td>
-            <td>
+            <td className={classes['price-box']}>
                 <span className={classes.price}>${price}</span>
             </td>
-            <td>
+            <td className={classes['counter-box']}>
                 <div className={classes["counter"]}>
                     <button className={classes.dec} onClick={removeItemHandler}>-</button>
                     <span className={classes.quantity}>{quantity}</span>
                     <button className={classes.inc} onClick={addItemHandler}>+</button>
                 </div>
             </td>
-            <td>
+            <td className={classes['total-price-box']}>
                 <p className={classes['total-price']}>${formattedItemTotalPrice}</p>
             </td>
         </tr>

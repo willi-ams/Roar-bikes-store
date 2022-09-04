@@ -55,3 +55,18 @@ body {
         padding: 0 2.3rem;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    
+    .centered {
+        text-align: center;
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .centered {
+        margin: 20rem auto 25rem 0;
+    }
+}

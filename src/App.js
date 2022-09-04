@@ -29,9 +29,9 @@ function App() {
             <Route path="/road-bikes" element={<RoadBikes />} />
             <Route path="/mountain-bikes" element={<MountainBikes />} />
             <Route path="/folding-bikes" element={<FoldingBikes />} />
-            <Route path="/cart" element={<CartLink />} />
+            <Route path="/cart/" element={<CartLink />} />
 
-            {/* <Route path="/:product/:productId" element={<ProductDetail />} /> */}
+            <Route path="/:product/:productId" element={<ProductDetail />} />
             {/* <Route path="/contact" element={<Contact />} /> */}
 
           </Routes>

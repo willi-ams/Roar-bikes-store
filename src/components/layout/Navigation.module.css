@@ -95,7 +95,7 @@
 
 @media only screen and (max-width: 1200px) {
     .nav {
-        padding: 1rem 2.3rem;
+        padding: 1rem 2.5rem 1rem 2.3rem;
     }
 }
 
@@ -111,5 +111,15 @@
 
     .nav .user-icons-box button:not(:last-child) {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .nav {
+        padding: 1rem 2.5rem 1rem 1.5rem;
+    }
+
+    .nav h1 {
+        font-size: 3rem;
     }
 }

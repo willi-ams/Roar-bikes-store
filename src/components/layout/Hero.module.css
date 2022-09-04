@@ -12,15 +12,19 @@
     padding: 2rem 3rem 3rem 3rem;
     background-color: rgba(255, 255, 255, 0.812);
     width: 40%;
-    height: 90%;
     border-radius: 2rem;
+}
+
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
 }
 
 .hero-box h1 {
     font-size: 4rem;
     color: #2d2a2a;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .hero-box a {
@@ -36,7 +40,50 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    .nav {
-        padding: 1rem 2.3rem;
+
+    .hero h1 {
+        font-size: 3.8rem;
+    }
+
+    .container {
+        padding: 0 2.3rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .hero-box {
+        width: 50%;
+    }
+
+    .hero-box h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-box a {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .hero-box h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .hero-box {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .hero-box h1 {
+        font-size: 3rem;
+    }
+
+    .hero-box a {
+        font-size: 1.3rem;
     }
 }

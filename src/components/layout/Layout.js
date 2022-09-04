@@ -9,6 +9,7 @@ import { cartModalActions } from '../../store/cart-modal-slice';
 import { sendCartData } from '../../store/cart-actions';
 import { getCartData } from '../../store/cart-actions';
 import MobileNavigation from './MobileNavigation';
+
 import styles from './Layout.module.css';
 
 let isInitial = true;

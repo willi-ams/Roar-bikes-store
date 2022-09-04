@@ -104,3 +104,10 @@
     font-size: 1.5rem;
     font-weight: 600;
 }
+
+@media only screen and (max-width: 800px) {
+
+    .detail {
+        font-size: 1.6rem;
+    }
+}

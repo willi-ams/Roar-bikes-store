@@ -3,6 +3,8 @@
     flex: 1;
     align-self: flex-start;
     padding: 2rem 3rem; 
+
+    margin-top: 4rem;
 }
 
 .cart-totals h1 {

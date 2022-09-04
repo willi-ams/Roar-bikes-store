@@ -40,6 +40,11 @@
     text-align: left;
 }
 
+/* --- cart-tab-list  --- */
+.cart-tab-list {
+    list-style: none;
+    display: none;
+}
 
 /* ------- coupon  ------ */
 
@@ -72,3 +77,57 @@
     font-size: 1.4rem;
 }
 
+
+@media only screen and (max-width: 1200px) {
+    .section__cart--page {
+        padding: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .section__cart--page {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .section__cart--page {
+        margin: 12rem auto 10rem auto;
+    }
+
+    .cart-main {
+        margin-right: 0;
+    }
+
+    .cart-main table {
+        display: none;
+    }
+
+    .cart-tab-list {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .coupon-box {
+        padding: 3rem 2rem;
+        border: 2px dashed rgba(119, 119, 119, 0.257);
+    }
+
+    .coupon-box input {
+        width: 100%;
+        display: block;
+        margin-bottom: 1rem;
+        padding: 1.1rem 2rem;
+        border: 2px solid rgba(118, 118, 118, 0.186);
+    }
+
+    .coupon-box button {
+        width: 100%;
+        display: block;
+        font-size: 1.3rem;
+        padding: 1.2rem 0;
+    }
+}

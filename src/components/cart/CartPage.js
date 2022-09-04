@@ -9,6 +9,7 @@ import ProductList from '../product/ProductList';
 import LoadingSpinner from '../layout/LoadingSpinner';
 
 import CartPageItem from './CartPageItem';
+import CartPageItemTab from './CartPageItemTab';
 import classes from './CartPage.module.css';
 
 const CartPage = () => {
@@ -63,19 +64,42 @@ const CartPage = () => {
             </tbody>
           </table>
 
-          <div className={classes['coupon-box']}>
-            <input type="text" placeholder='Coupon code' />
+          {/* note that this shows only on tab -to- mobile viewpoint */}
+          <ul className={classes["cart-tab-list"]}>
+            {cartItems.map((curItem) => (
+              <CartPageItemTab
+                key={curItem.id}
+                id={curItem.id}
+                img={curItem.img}
+                itemTotalPrice={curItem.itemTotalPrice}
+                price={curItem.price}
+                quantity={curItem.quantity}
+                description={curItem.description}
+              />
+            ))}
+          </ul>
+
+          <div className={classes["coupon-box"]}>
+            <input type="text" placeholder="Coupon code" />
             <button>Apply Coupon</button>
           </div>
         </div>
 
         <CartPageTotals />
       </section>
-      {status === 'pending' && <div className='centered'><LoadingSpinner /></div>}
-      {error && <div className="centered">
-        <p>{error}</p>
-      </div>}
-      {status === 'completed' && !error && <ProductList products={optionalList} isCollection={'optional'} />}
+      {status === "pending" && (
+        <div className="centered">
+          <LoadingSpinner />
+        </div>
+      )}
+      {error && (
+        <div className="centered">
+          <p>{error}</p>
+        </div>
+      )}
+      {status === "completed" && !error && (
+        <ProductList products={optionalList} isCollection={"optional"} />
+      )}
     </Fragment>
   );
 
