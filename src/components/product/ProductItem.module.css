@@ -105,6 +105,17 @@
     font-weight: 600;
 }
 
+@media only screen and (max-width: 1200px) {
+
+    .item__btn--invisible {
+        display: none;
+    }
+
+    .item__btn--cart:hover .item__icon-cart {
+        transform: translateY(0);
+    }
+}
+
 @media only screen and (max-width: 800px) {
 
     .detail {

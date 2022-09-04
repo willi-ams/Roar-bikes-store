@@ -10,5 +10,18 @@
     border-left: 12px solid #2d2a2a;
     border-right: 12px solid #2d2a2a00;
 
-    animation: spin 0.575s infinite linear;
-};
+    animation: spin 0.475s infinite linear;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .loader {
+        width: 64px;
+        height: 64px;
+
+        border-top: 9px solid #2d2a2a;
+        border-left: 9px solid #2d2a2a;
+        border-right: 9px solid #2d2a2a00;
+    }
+}
