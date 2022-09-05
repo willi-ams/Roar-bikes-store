@@ -21,9 +21,7 @@ const ProductView = (props) => {
 
     return (
         <div className={styles['product-view']}>
-            <div className={styles["img-box"]}>
-                <img src={props.product.image} alt={props.product.description} />
-            </div>
+            <img src={props.product.image} alt={props.product.description} />
 
             <div className={styles['view-box']}>
                 <h2>{props.product.description}</h2>

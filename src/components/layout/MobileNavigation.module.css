@@ -44,6 +44,8 @@
 
 .icon-text {
     display: block;
+    font-size: 1.33rem;
+    font-weight: 500;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -52,5 +54,17 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .nav-icon {
+        height: 2.1rem;
+        width: 2.1rem;
+    }
+
+    .icon-text {
+        font-size: 1.25rem;
     }
 }
