@@ -18,6 +18,9 @@ const ProductItem = (props) => {
     const { id, img, description, price } = props;
 
     const addToCartHandler = () => {
+        if (isLoading) return;
+        setIsloading(true);
+
         dispatch(cartActions.addItemToCart({
             id,
             img,
@@ -25,7 +28,6 @@ const ProductItem = (props) => {
             price,
             amount: 1
         }));
-        setIsloading(true);
     };
 
     useEffect(() => {
