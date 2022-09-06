@@ -23,11 +23,11 @@ const Notification = (props) => {
             </div>
 
             <div className={classes['button-box']}>
-                <div className={classes['icon-box']} onClick={props.onClose}>
+                <button className={classes['icon-btn']} onClick={props.onClose}>
                     <svg className={classes["iconx"]}>
                         <use xlinkHref={`${icon}#icon-x`} />
                     </svg>
-                </div>
+                </button>
             </div>
         </aside>
     );

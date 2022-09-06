@@ -1,8 +1,9 @@
 import { useRef, useEffect, useState } from "react";
+import classes from './ProductForm.module.css';
+
 import { useSelector } from "react-redux";
 import ProductItemSpinner from "../UI/ProductItemSpinner";
 
-import classes from './ProductForm.module.css';
 
 
 const ProductForm = (props) => {

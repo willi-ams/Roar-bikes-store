@@ -21,6 +21,10 @@
     position: relative;
 }
 
+.user-btn:focus {
+    outline: none;
+}
+
 .user-btn:not(:last-child) {
     margin-right: 2rem;
 }

@@ -21,6 +21,9 @@
     border: none;
     cursor: pointer;
 }
+.cancel-btn:focus {
+    outline: none;
+}
 
 .cancel-icon {
     width: 2.3rem;

@@ -39,7 +39,7 @@
     flex: 0 0 8%;
 }
 
-.icon-box {
+.icon-btn {
     width: 2rem;
     height: 2rem;
     background: #fff;
@@ -51,6 +51,10 @@
     align-items: center;
 
     cursor: pointer;
+}
+
+.icon-btn:focus {
+    outline: none;
 }
 
 .iconx {
