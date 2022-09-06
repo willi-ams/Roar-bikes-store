@@ -1,9 +1,10 @@
+import styles from './ProductView.module.css';
+
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
 import ProductForm from './ProductForm';
 
 import icon from '../../assets/sprite.svg';
-import styles from './ProductView.module.css';
 
 const ProductView = (props) => {
     const dispatch = useDispatch();
