@@ -54,6 +54,10 @@
     display: none;
 }
 
+.menu-btn:focus {
+    outline: none;
+}
+
 .menu-btn span {
     text-transform: uppercase;
     color: #fff;

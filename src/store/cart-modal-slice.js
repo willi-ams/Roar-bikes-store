@@ -12,7 +12,7 @@ const cartModalSlice = createSlice({
         },
         setNotification (state, action) {
             state.notification = action.payload;
-            console.log(action.payload);
+            // console.log(action.payload);
         }
     }
 });

@@ -18,7 +18,7 @@ const ProductItem = (props) => {
     const { id, img, description, price } = props;
 
     const addToCartHandler = () => {
-        if (isLoading) return;
+        if (isLoading) return;  // if we are already loading an item, return!
         setIsloading(true);
 
         dispatch(cartActions.addItemToCart({
@@ -30,7 +30,7 @@ const ProductItem = (props) => {
         }));
     };
 
-    useEffect(() => {
+    useEffect(() => {  // this effect is for the product loading spinner state
 
         if (notification) {  // notification is falsy by (default) in the redux store
             setIsloading(false);

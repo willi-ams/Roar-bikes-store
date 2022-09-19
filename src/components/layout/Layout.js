@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 
 import Cart from '../cart/Cart';
+import Menu from '../menu/Menu';
 import Navigation from './Navigation';
 import Notification from '../UI/Notification';
 import Footer from './Footer' ;
@@ -21,6 +22,7 @@ const Layout = (props) => {
     const notification = useSelector(state => state.cartModal.notification);
     
     const [cartIsClicked, setCartIsClicked] = useState(false);
+    const [menuIsClicked, setMenuIsClicked] = useState(false);
 
     useEffect(() => {  // this effect if for fetching d cart data and updating it
         dispatch(getCartData());
@@ -33,18 +35,33 @@ const Layout = (props) => {
         };
 
         if (cart.changed) dispatch(sendCartData(cart));
+    }, [cart, dispatch]);
+
+    useEffect(() => {  // this effect runs whenever d cart changes and sends d cart data to d database.
+        if (isInitial) {
+            isInitial = false;
+            return;
+        };
 
         const timer = setTimeout(() => {
             dispatch(cartModalActions.setNotification(null));
-        }, 5000);
+        }, 4000);
 
         return () => {
             clearTimeout(timer);
         }
-    }, [cart, dispatch]);
+    }, [notification, dispatch]);
 
     const closeNotificationHandler = () => {
         dispatch(cartModalActions.setNotification(null));
+    };
+
+    const showMenuHandler = () => {
+        setMenuIsClicked(true);
+    };
+
+    const hideMenuHandler = () => {
+        setMenuIsClicked(false);
     };
 
     const showCartHandler = () => {
@@ -59,9 +76,10 @@ const Layout = (props) => {
     return (
         <Fragment>
             {cartIsClicked && !cartPageIsActive && <Cart onClose={hideCartHandler} />}
+            {menuIsClicked && <Menu onClose={hideMenuHandler}  />}
             <header className={styles.header}>
                 {notification && <Notification status={notification.status} message={notification.message} onClose={closeNotificationHandler} />}
-                <Navigation onShowCart={showCartHandler} />
+                <Navigation onShowMenu={showMenuHandler} onShowCart={showCartHandler} />
             </header>
             <main>
                 {props.children}

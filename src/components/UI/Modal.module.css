@@ -15,7 +15,7 @@
     animation-timing-function: ease-in;
 }
 
-.modal {
+.cart-modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -30,6 +30,39 @@
     animation-name: display;
     animation-duration: .2s;
     animation-timing-function: ease-out;
+}
+
+.menu-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 25%;
+    height: 100vh;
+    z-index: 6;
+
+    overflow: auto;
+
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+
+    animation-name: menu-display;
+    animation-duration: .2s;
+    animation-timing-function: ease-out;
+}
+
+.menu-modal::-webkit-scrollbar {
+    width: 3px;
+}
+
+.menu-modal::-webkit-scrollbar-track {
+    /* scroll background */
+    background: #ffffffc3;
+}
+
+.menu-modal::-webkit-scrollbar-thumb {
+    /* scroll line */
+    background: rgba(153, 153, 153, 0.735);
 }
 
 @keyframes fadeIn {
@@ -55,38 +88,75 @@
     }
 }
 
+@keyframes menu-display {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @media only screen and (max-width: 1200px) {
-    .modal {
+    .cart-modal {
+        width: 35%;
+    }
+
+    .menu-modal {
         width: 35%;
     }
 }
 
 @media only screen and (max-width: 1000px) {
-    .modal {
+    .cart-modal {
+        width: 45%;
+    }
+
+    .menu-modal {
         width: 45%;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .modal {
+    .cart-modal {
+        width: 55%;
+    }
+
+    .menu-modal {
         width: 55%;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .modal {
+    .cart-modal {
+        width: 65%;
+    }
+
+    .menu-modal {
         width: 65%;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .modal {
+    .cart-modal {
+        width: 75%;
+    }
+
+    .menu-modal {
         width: 75%;
     }
 }
 
 @media only screen and (max-width: 400px) {
-    .modal {
+    .cart-modal {
+        width: 80%;
+    }
+
+    .menu-modal {
         width: 80%;
     }
 }

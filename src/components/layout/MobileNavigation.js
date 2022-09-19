@@ -12,7 +12,7 @@ const MobileNavigation = (props) => {
 
             <button className={styles['user-btn']}>
                 <svg className={styles['nav-icon']}>
-                    <use xlinkHref={`${icon}#icon-heart`} />
+                    <use xlinkHref={`${icon}#icon-home`} />
                 </svg>
             <span className={styles['icon-text']}>Shop</span>
             </button>

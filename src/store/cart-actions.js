@@ -28,7 +28,7 @@ export const sendCartData = (cartData) => {
 
     return async (dispatch) => {
 
-        cartModalActions.setNotification(null);
+        cartModalActions.setNotification(null);  // no notification
         
         try {
             const response = await fetch('https://roarbikes-store-default-rtdb.firebaseio.com/cart.json', {

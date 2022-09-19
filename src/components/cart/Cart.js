@@ -16,7 +16,7 @@ const Cart = (props) => {
     const formattedCartTotal = catrTotalAmount.toLocaleString();
 
     return (
-      <Modal onClose={props.onClose}>
+      <Modal onClose={props.onClose} content='cart'>
         <div className={classes.head}>
           <h2>Shopping Cart</h2>
           <button className={classes["cancel-btn"]} onClick={props.onClose}>

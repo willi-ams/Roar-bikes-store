@@ -9,7 +9,7 @@ const Navigation = (props) => {
 
     return (
         <nav className={styles.nav}>
-            <button className={styles['menu-btn']}>
+            <button className={styles['menu-btn']} onClick={props.onShowMenu}>
                 <svg className={styles['menu-icon']}>
                     <use xlinkHref={`${icons}#icon-menu`} />
                 </svg>

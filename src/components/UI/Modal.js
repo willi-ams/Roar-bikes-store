@@ -11,7 +11,10 @@ const BackDrop = (props) => {
 
 const ModalOverlay = (props) => {
     return (
-        <div className={classes.modal}>{props.children}</div>
+        <Fragment>
+            {props.content === 'menu' && <div className={classes['menu-modal']}>{props.children}</div>}
+            {props.content === 'cart' && <div className={classes['cart-modal']}>{props.children}</div>}
+        </Fragment>
     )
 };
 
@@ -22,7 +25,7 @@ const Modal = (props) => {
     return (
         <Fragment>
             {ReactDom.createPortal(<BackDrop onClose={props.onClose} />, portalElement)}
-            {ReactDom.createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portalElement)}
+            {ReactDom.createPortal(<ModalOverlay content={props.content}>{props.children}</ModalOverlay>, portalElement)}
         </Fragment>
     )
 
