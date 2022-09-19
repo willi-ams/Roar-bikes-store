@@ -23,7 +23,7 @@ const Menu = (props) => {
         <Modal onClose={props.onClose} content='menu'>
             <ul className={classes["menu-list"]}>
                 <li className={classes["menu-item"]}>
-                    <NavLink to='/' className={({ isActive }) => isActive ? classes.active : ''}>Home</NavLink>
+                    <NavLink to='/' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>Home</NavLink>
                 </li>
 
                 <li className={productCollapsibleClass}>
@@ -37,13 +37,13 @@ const Menu = (props) => {
                     </div>
                     <ul className={classes["collapsible__content"]}>
                         <li className={classes["menu-item"]}>
-                            <NavLink to='/road-bikes' className={({ isActive }) => isActive ? classes.active : ''}>Road Bikes</NavLink>
+                            <NavLink to='/road-bikes' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>Road Bikes</NavLink>
                         </li>
                         <li className={classes["menu-item"]}>
-                            <NavLink to='/mountain-bikes' className={({ isActive }) => isActive ? classes.active : ''}>Mountain Bikes</NavLink>
+                            <NavLink to='/mountain-bikes' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>Mountain Bikes</NavLink>
                         </li>
                         <li className={classes["menu-item"]}>
-                            <NavLink to='/folding-bikes' className={({ isActive }) => isActive ? classes.active : ''}>Folding Bikes</NavLink>
+                            <NavLink to='/folding-bikes' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>Folding Bikes</NavLink>
                         </li>
                     </ul>
                 </li>
@@ -59,13 +59,13 @@ const Menu = (props) => {
                     </div>
                     <ul className={classes["collapsible__content"]}>
                         <li className={classes["menu-item"]}>
-                            <NavLink to='/my-Account' className={({ isActive }) => isActive ? classes.active : ''}>My Account</NavLink>
+                            <NavLink to='/my-Account' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>My Account</NavLink>
                         </li>
                         <li className={classes["menu-item"]}>
-                            <NavLink to='/track-order' className={({ isActive }) => isActive ? classes.active : ''}>Track Order</NavLink>
+                            <NavLink to='/track-order' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>Track Order</NavLink>
                         </li>
                         <li className={classes["menu-item"]}>
-                            <NavLink to='/returns' className={({ isActive }) => isActive ? classes.active : ''}>Returns & exchange </NavLink>
+                            <NavLink to='/returns' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>Returns & exchange </NavLink>
                         </li>
                     </ul>
                 </li>
@@ -81,23 +81,33 @@ const Menu = (props) => {
                     </div>
                     <ul className={classes["collapsible__content"]}>
                         <li className={classes["menu-item"]}>
-                            <NavLink to='/private-policy' className={({ isActive }) => isActive ? classes.active : ''}>Private Policy</NavLink>
+                            <NavLink to='/private-policy' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>Private Policy</NavLink>
                         </li>
                         <li className={classes["menu-item"]}>
-                            <NavLink to='/about' className={({ isActive }) => isActive ? classes.active : ''}>About</NavLink>
+                            <NavLink to='/about' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>About</NavLink>
                         </li>
                         <li className={classes["menu-item"]}>
-                            <NavLink to='/contact' className={({ isActive }) => isActive ? classes.active : ''}>Contact</NavLink>
+                            <NavLink to='/contact' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>Contact</NavLink>
                         </li>
                     </ul>
                 </li>
 
                 <li className={classes["menu-item"]}>
-                    <NavLink to='/wishlist' className={({ isActive }) => isActive ? classes.active : ''}>Wishlist</NavLink>
+                    <NavLink to='/wishlist' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>
+                        <svg className={classes['link-icon']}>
+                            <use xlinkHref={`${icons}#icon-heart`} />
+                        </svg>
+                        Wishlist
+                    </NavLink>
                 </li>
 
                 <li className={classes["menu-item"]}>
-                    <NavLink to='/login' className={({ isActive }) => isActive ? classes.active : ''}>Login / Register</NavLink>
+                    <NavLink to='/login' onClick={props.onClose} className={({ isActive }) => isActive ? classes.active : ''}>
+                        <svg className={classes['link-icon']}>
+                            <use xlinkHref={`${icons}#icon-user`} />
+                        </svg>
+                        Login / Register
+                    </NavLink>
                 </li>
             </ul>
         </Modal>

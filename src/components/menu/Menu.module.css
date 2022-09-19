@@ -7,8 +7,11 @@
 
 .menu-list .menu-item a {
     width: 100%;
-    display: block;
+    /* display: block; */
     padding: 1.2rem 0 1.2rem 2rem;
+
+    display: flex;
+    align-items: center;
 }
 
 .menu-list a,
@@ -62,6 +65,12 @@
     fill: #555;
 
     transition: transform .2s;
+}
+.link-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: #2d2a2a;
+    margin-right: 1rem;
 }
 
 .menu-list button.active .menu-icon {
