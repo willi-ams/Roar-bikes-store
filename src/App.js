@@ -10,8 +10,8 @@ const RoadBikes = React.lazy(() => import('./pages/RoadBikes'));
 const MountainBikes = React.lazy(() => import('./pages/MountainBikes'));
 const FoldingBikes = React.lazy(() => import('./pages/FoldingBikes'));
 const ProductDetail = React.lazy(() => import('./pages/ProductDetail'));
-const NotFound = React.lazy(() => import('./pages/NotFound'));
 const CartLink = React.lazy(() => import('./pages/CartLink'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 // import Contact from './pages/Contact';
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
       <Layout>
         <Suspense fallback={<div className="centered"><LoadingSpinner /></div>}>
           <Routes>
+            <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path=":productId" element={<ProductDetail />} />
 
@@ -31,7 +32,6 @@ function App() {
             <Route path="/cart/" element={<CartLink />} />
 
             <Route path="/:product/:productId" element={<ProductDetail />} />
-            <Route path="*" element={<NotFound />} />
             {/* <Route path="/contact" element={<Contact />} /> */}
 
           </Routes>

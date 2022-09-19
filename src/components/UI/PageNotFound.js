@@ -1,9 +1,9 @@
-import styles from './PageNotFound.module.css';
+import classes from './PageNotFound.module.css';
 
 const PageNotFound = () => {
     return (
-        <section className={styles.notfound}>
-            <h1 className={styles.text}>Page not found.</h1>
+        <section className={classes.notfound}>
+            <h1>Page not found.</h1>
         </section>
     )
 };

@@ -2,7 +2,7 @@
     padding: 20rem 0;
 }
 
-.text {
+.notfound h1 {
     font-size: 5rem;
     text-align: center;
     color: #2d2a2a;
@@ -11,7 +11,7 @@
 
 @media only screen and (max-width: 800px) {
     
-    .text {
+    .notfound h1 {
         font-size: 4rem;
     }
 }
@@ -22,7 +22,7 @@
         padding: 25rem 2rem;
     }
     
-    .text {
+    .notfound h1 {
         font-size: 3rem;
     }
 }
