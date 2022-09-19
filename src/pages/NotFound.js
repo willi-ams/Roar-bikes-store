@@ -1,8 +1,8 @@
-import PageNotFound from "../components/UI/PageNotFound";
-
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { cartModalActions } from "../store/cart-modal-slice";
+
+import PageNotFound from "../components/UI/PageNotFound";
 
 const Notfound = () => {
     const dispatch = useDispatch();

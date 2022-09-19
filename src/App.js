@@ -21,7 +21,6 @@ function App() {
       <Layout>
         <Suspense fallback={<div className="centered"><LoadingSpinner /></div>}>
           <Routes>
-            <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path=":productId" element={<ProductDetail />} />
 
@@ -32,6 +31,7 @@ function App() {
             <Route path="/cart/" element={<CartLink />} />
 
             <Route path="/:product/:productId" element={<ProductDetail />} />
+            <Route path="*" element={<NotFound />} />
             {/* <Route path="/contact" element={<Contact />} /> */}
 
           </Routes>
