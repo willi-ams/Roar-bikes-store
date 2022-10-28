@@ -11,6 +11,19 @@
     animation: spin 0.45s infinite linear;
 }
 
+.spinner-dark {
+    margin: .4rem 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+
+    border-top: 2px solid #2d2a2a;
+    border-left: 2px solid #2d2a2a;
+    border-right: 2px solid rgb(255, 255, 255, 0);
+
+    animation: spin 0.45s infinite linear;
+}
+
 @keyframes spin {
     to { transform: rotate(360deg); }
 };

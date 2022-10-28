@@ -1,9 +1,12 @@
+import { Fragment } from 'react';
 import classes from './ProductItemSpinner.module.css';
 
-const ProductItemSpinner = () => {
+const ProductItemSpinner = (props) => {
 
     return (
-        <div className={classes['spinner']}></div>
+        <Fragment>
+            <div className={props.type === 'cart' ? classes['spinner'] : classes['spinner-dark'] }></div>
+        </Fragment>
     )
 };
 

@@ -7,18 +7,22 @@ import Navigation from './Navigation';
 import Notification from '../UI/Notification';
 import Footer from './Footer' ;
 import { cartModalActions } from '../../store/cart-modal-slice';
+import { sendWishlistData } from '../../store/cart-actions';
 import { sendCartData } from '../../store/cart-actions';
+import { getWishlistData } from '../../store/cart-actions';
 import { getCartData } from '../../store/cart-actions';
 import MobileNavigation from './MobileNavigation';
 
 import styles from './Layout.module.css';
 
 let isInitial = true;
+let isLoaded = true;
 
 const Layout = (props) => {
     const dispatch = useDispatch();
     const cartPageIsActive = useSelector(state => state.cartModal.cartPageIsActive);
     const cart = useSelector(state => state.cart);
+    const wishListData = useSelector(state => state.wishList);
     const notification = useSelector(state => state.cartModal.notification);
     
     const [cartIsClicked, setCartIsClicked] = useState(false);
@@ -27,6 +31,19 @@ const Layout = (props) => {
     useEffect(() => {  // this effect if for fetching d cart data and updating it
         dispatch(getCartData());
     }, [dispatch]);
+
+    useEffect(() => {  // this effect if for fetching d wishList data and updating it
+        dispatch(getWishlistData());
+    }, [dispatch]);
+
+    useEffect(() => {  // this effect runs whenever d wishlist items changes and sends d data to d database.
+        if (isLoaded) {
+            isLoaded = false;
+            return;
+        };
+
+        dispatch(sendWishlistData(wishListData));
+    }, [wishListData, dispatch]);
 
     useEffect(() => {  // this effect runs whenever d cart changes and sends d cart data to d database.
         if (isInitial) {
@@ -37,8 +54,8 @@ const Layout = (props) => {
         if (cart.changed) dispatch(sendCartData(cart));
     }, [cart, dispatch]);
 
-    useEffect(() => {  // this effect runs whenever d cart changes and sends d cart data to d database.
-        if (isInitial) {
+    useEffect(() => {  // this effect runs whenever the cart changes and there is a notification
+        if (isInitial) {  // remember it dosent work here
             isInitial = false;
             return;
         };

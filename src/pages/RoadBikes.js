@@ -19,7 +19,7 @@ const RoadBikes = () => {
     sendRequest();
   }, [sendRequest]);
 
-  console.log(products);
+  // console.log(products);
 
   if (status === 'pending') {
     return <div className="centered">
@@ -31,7 +31,7 @@ const RoadBikes = () => {
     return <div className="centered">
       <p>{error}</p>
     </div>
-  }
+  };
 
   const roadBikesItems = products.filter(curProduct => curProduct.type === 'rb');
 
@@ -45,3 +45,6 @@ const RoadBikes = () => {
 };
 
 export default RoadBikes;
+
+
+

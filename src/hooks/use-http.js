@@ -41,7 +41,7 @@ const useHttp = (requestFunction, startWithPending = false) => {
             const responseData = await requestFunction(requestData);
             dispatch({type: 'SUCCESS', responseData});
         } catch (error) {
-            console.log(error.message);
+            // console.log(error.message);
             dispatch({type: 'ERROR',  errorMesage: 'Unable to load the items. Refresh the page to try again.'});
         } 
     }, [requestFunction]);
