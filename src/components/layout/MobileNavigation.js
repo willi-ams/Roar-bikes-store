@@ -7,6 +7,7 @@ import icon from '../../assets/sprite.svg';
 const MobileNavigation = (props) => {
     const navigate = useNavigate();
     const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+    const wishlistItemsAmount = useSelector((state) => state.wishList.totalItems);
 
     const showSavedItemsHandler = () => {
         navigate('/wishlist');
@@ -26,7 +27,7 @@ const MobileNavigation = (props) => {
                 <svg className={styles["nav-icon"]}>
                     <use xlinkHref={`${icon}#icon-heart`} />
                 </svg>
-                <span className={styles["nav-icon__notification"]}>0</span>
+                <span className={styles["nav-icon__notification"]}>{wishlistItemsAmount}</span>
             <span className={styles['icon-text']}>Wishlist</span>
             </button>
 
