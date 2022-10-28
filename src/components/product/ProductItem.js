@@ -25,7 +25,7 @@ const ProductItem = (props) => {
     const isExistingInWishlist = wishlistItems.find(cur => cur.id === id);
 
     const addToWishListHandler = () => {
-        if(isExistingInWishlist) { // if d wishlist item exist already
+        if(isExistingInWishlist) { // if a wishlist item exist already
             navigate('/wishlist');
             return;
         };  

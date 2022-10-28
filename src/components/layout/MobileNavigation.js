@@ -1,11 +1,16 @@
 import styles from './MobileNavigation.module.css';
 
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import icon from '../../assets/sprite.svg';
 
 const MobileNavigation = (props) => {
-
+    const navigate = useNavigate();
     const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
+    const showSavedItemsHandler = () => {
+        navigate('/wishlist');
+    };
 
     return (
         <section className={styles['mobile-nav']}>
@@ -17,7 +22,7 @@ const MobileNavigation = (props) => {
             <span className={styles['icon-text']}>Shop</span>
             </button>
             
-            <button className={styles["user-btn"]}>
+            <button className={styles["user-btn"]} onClick={showSavedItemsHandler}>    
                 <svg className={styles["nav-icon"]}>
                     <use xlinkHref={`${icon}#icon-heart`} />
                 </svg>
