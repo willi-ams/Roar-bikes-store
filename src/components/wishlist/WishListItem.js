@@ -1,3 +1,4 @@
+import classes from './WishListItem.module.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -6,7 +7,6 @@ import { wishlistActions } from '../../store/wishlist-slice';
 import { cartActions } from '../../store/cart-slice';
 import icon from '../../assets/sprite.svg';
 import ProductItemSpinner from '../UI/ProductItemSpinner';
-import classes from './WishListItem.module.css';
 
 const WishListItem = (props) => {
     const [isLoading, setIsloading] = useState(false);

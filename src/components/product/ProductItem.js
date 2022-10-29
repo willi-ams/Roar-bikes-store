@@ -100,7 +100,7 @@ const ProductItem = (props) => {
 
             <p className={classes.price}>${props.price}</p>
         </div>
-    )
+    );
 }
 
 export default ProductItem;
