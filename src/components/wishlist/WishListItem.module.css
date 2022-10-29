@@ -24,10 +24,6 @@
     transition: scale 3s;
 }
 
-.item:hover .item-img {
-    scale: 0.97;
-}
-
 .item button {
     border: none;
     display: flex;
@@ -40,7 +36,7 @@
 .item__btn--cancel {
     background-color: transparent;
     padding: 1rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 2rem;
 }
 
 .item__btn--cancel span { 
@@ -130,6 +126,10 @@
     /* .item__detail {
 
     } */
+
+    .item__btn--cancel {
+        margin-bottom: 1rem;
+    }
 
     .item__btn--cart {
         grid-row: 3 / 4;
