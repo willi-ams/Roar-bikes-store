@@ -33,12 +33,19 @@
     .section-items {
         padding: 0 2rem;
     }
-}
+};
 
 @media only screen and (max-width: 800px) {
     
     .items-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+};
+
+@media only screen and (max-width: 500px) {
+    
+    .item__head-text h2 {
+        font-size: 1.5rem
+    }
+}; 
 
