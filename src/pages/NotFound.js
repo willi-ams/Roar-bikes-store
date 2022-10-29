@@ -13,6 +13,6 @@ const Notfound = () => {
     return (
         <PageNotFound />
     )
-};
+}
 
 export default Notfound;

@@ -1,5 +1,6 @@
-import classes from './WishList.module.css';
 import WishListItem from './WishListItem';
+
+import classes from './WishList.module.css';
 
 const WishList = (props) => {
 
