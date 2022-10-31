@@ -31,6 +31,8 @@ function App() {
             <Route path="/cart" element={<CartLink />} />
             <Route path="/wishlist" element={<WishList />} />
 
+            <Route path="*" element={<WishList />} />
+
             {/* <Route path="/:product/:productId" element={<ProductDetail />} /> */}
             {/* <Route path="/contact" element={<Contact />} /> */}
 
