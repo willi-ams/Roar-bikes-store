@@ -49,6 +49,16 @@ body {
     padding: 2rem 0;
 }
 
+.notfound {
+    padding: 20rem 0;
+}
+
+.notfound h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: #2d2a2a;
+}
+
 
 @media only screen and (max-width: 1200px) {
     .container {
@@ -64,25 +74,6 @@ body {
     }
 }
 
-@media only screen and (max-width: 600px) {
-    
-    .centered {
-        margin: 20rem auto 25rem 0;
-    }
-}
-
-
-/* .notfound {
-    padding: 20rem 0;
-}
-
-.notfound h1 {
-    font-size: 5rem;
-    text-align: center;
-    color: #2d2a2a;
-}
-
-
 @media only screen and (max-width: 800px) {
 
     .notfound h1 {
@@ -91,12 +82,16 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+    
+    .centered {
+        margin: 20rem auto 25rem 0;
+    }
 
     .notfound {
         padding: 25rem 2rem;
     }
-
+    
     .notfound h1 {
         font-size: 3rem;
     }
-} */
+}

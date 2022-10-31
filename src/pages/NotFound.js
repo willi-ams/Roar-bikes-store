@@ -11,7 +11,9 @@ const Notfound = () => {
     }, [dispatch]);
 
     return (
-        <></>
+        <section className="notfound">
+            <h1>Page not found</h1>
+        </section>
     );
 }
 
