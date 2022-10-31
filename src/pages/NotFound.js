@@ -1,7 +1,7 @@
-import PageNotFound from "../components/UI/PageNotFound";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { cartModalActions } from "../store/cart-modal-slice";
+
 
 const Notfound = () => {
     const dispatch = useDispatch();
@@ -11,8 +11,8 @@ const Notfound = () => {
     }, [dispatch]);
 
     return (
-        <PageNotFound />
-    )
+        <></>
+    );
 }
 
 export default Notfound;
