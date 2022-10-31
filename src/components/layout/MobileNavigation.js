@@ -20,15 +20,15 @@ const MobileNavigation = (props) => {
                 <svg className={styles['nav-icon']}>
                     <use xlinkHref={`${icon}#icon-home`} />
                 </svg>
-            <span className={styles['icon-text']}>Shop</span>
+                <span className={styles['icon-text']}>Shop</span>
             </button>
-            
-            <button className={styles["user-btn"]} onClick={showSavedItemsHandler}>    
+
+            <button className={styles["user-btn"]} onClick={showSavedItemsHandler}>
                 <svg className={styles["nav-icon"]}>
                     <use xlinkHref={`${icon}#icon-heart`} />
                 </svg>
                 <span className={styles["nav-icon__notification"]}>{wishlistItemsAmount}</span>
-            <span className={styles['icon-text']}>Wishlist</span>
+                <span className={styles['icon-text']}>Wishlist</span>
             </button>
 
             <button className={styles['user-btn']} onClick={props.onShowCart}>
@@ -36,14 +36,14 @@ const MobileNavigation = (props) => {
                     <use xlinkHref={`${icon}#icon-shopping-cart`} />
                 </svg>
                 <span className={styles['nav-icon__notification']}>{totalQuantity}</span>
-            <span className={styles['icon-text']}>Cart</span>
+                <span className={styles['icon-text']}>Cart</span>
             </button>
 
             <button className={styles['user-btn']}>
                 <svg className={styles['nav-icon']}>
                     <use xlinkHref={`${icon}#icon-user`} />
                 </svg>
-            <span className={styles['icon-text']}>My acount</span>
+                <span className={styles['icon-text']}>My acount</span>
             </button>
         </section>
     )
