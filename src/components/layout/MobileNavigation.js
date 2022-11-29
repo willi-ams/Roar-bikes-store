@@ -13,21 +13,24 @@ const MobileNavigation = (props) => {
         navigate('/wishlist');
     };
 
+    const linkToHomeHandler = () => {
+        navigate('/');
+    };
+
     return (
         <section className={styles['mobile-nav']}>
-
-            <button className={styles['user-btn']}>
+            <button className={styles['user-btn']} onClick={linkToHomeHandler}>
                 <svg className={styles['nav-icon']}>
                     <use xlinkHref={`${icon}#icon-home`} />
                 </svg>
                 <span className={styles['icon-text']}>Shop</span>
             </button>
 
-            <button className={styles["user-btn"]} onClick={showSavedItemsHandler}>
-                <svg className={styles["nav-icon"]}>
+            <button className={styles['user-btn']} onClick={showSavedItemsHandler}>
+                <svg className={styles['nav-icon']}>
                     <use xlinkHref={`${icon}#icon-heart`} />
                 </svg>
-                <span className={styles["nav-icon__notification"]}>{wishlistItemsAmount}</span>
+                <span className={styles['nav-icon__notification']}>{wishlistItemsAmount}</span>
                 <span className={styles['icon-text']}>Wishlist</span>
             </button>
 
@@ -46,7 +49,7 @@ const MobileNavigation = (props) => {
                 <span className={styles['icon-text']}>My acount</span>
             </button>
         </section>
-    )
+    );
 };
 
 export default MobileNavigation;

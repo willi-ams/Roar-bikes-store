@@ -39,7 +39,7 @@
     margin-bottom: 2rem;
 }
 
-.item__btn--cancel span { 
+.item__btn--cancel span {
     text-transform: uppercase;
     font-weight: 600;
     color: #2d2a2a;
@@ -60,6 +60,7 @@
     grid-column: 1 / -1;
     padding: .5rem 1rem .5rem .5rem;
     background-color: #ff6b81de;
+    height: 4.5rem;
 
     justify-self: stretch;
     align-self: end;
@@ -93,7 +94,7 @@
     display: inline-block;
 
     position: absolute;
-    transform: translateY(-160%);
+    transform: translateY(-180%);
     transition: all .2s;
 }
 
@@ -154,6 +155,10 @@
 
     .item {
         grid-template-rows: min-content 22rem;
+    }
+
+    .item__btn--cart {
+        height: 4rem;
     }
 }
 

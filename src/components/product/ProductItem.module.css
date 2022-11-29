@@ -160,7 +160,7 @@
 @media only screen and (max-width: 600px) {
 
     .item {
-        grid-template-rows: 22rem;
+        grid-template-rows: 22rem 4rem;
     }
 
     .item img {
@@ -171,7 +171,7 @@
 @media only screen and (max-width: 500px) {
 
     .item {
-        grid-template-rows: 18rem;
+        grid-template-rows: 18rem 4rem;
     }
 
     .item img {
