@@ -3,7 +3,7 @@
     padding: 1rem;
 
     display: grid;
-    grid-template-rows: 25rem;
+    grid-template-rows: 25rem 4.5rem;
 
     justify-items: center;
     align-items: center;
@@ -32,6 +32,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.item button:focus {
+    outline: none;
 }
 
 .item__btn--heart {
@@ -74,12 +78,13 @@
 /* ------------------- */
 .item__btn--cart {
     /* display: block; */
-    padding: .5rem 1rem .5rem .5rem;
+    position: relative;
+    /* padding: .5rem 1rem .5rem .5rem; */
     background-color: #ff6b81de;
 
     justify-self: stretch;
+    align-self: stretch;
 
-    position: relative;
     overflow: hidden;
 }
 
@@ -97,7 +102,7 @@
     display: inline-block;
 
     position: absolute;
-    transform: translateY(-160%);
+    transform: translateY(-180%);
     transition: all .2s;
 }
 

@@ -35,8 +35,9 @@ body {
 }
 
 .centered {
-    margin: 15rem auto;
+    margin: 17rem auto;
     max-width: 114rem;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +68,7 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
-    
+
     .centered {
         text-align: center;
         padding: 0 2rem;
@@ -82,7 +83,7 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    
+
     .centered {
         margin: 20rem auto 25rem 0;
     }
@@ -90,7 +91,7 @@ body {
     .notfound {
         padding: 25rem 2rem;
     }
-    
+
     .notfound h1 {
         font-size: 3rem;
     }

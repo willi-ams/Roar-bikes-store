@@ -41,6 +41,12 @@
     margin-top: 2.2rem;
 }
 
+.spinner {
+    position: relative;
+    margin-right: 1.5rem;
+    margin-left: 1rem;
+}
+
 .wishlist-btn:hover svg {
     fill: var(--color-primary);
 }
@@ -96,7 +102,7 @@
     .product-view h2 {
         font-size: 2.5rem;
         margin-bottom: .2rem;
-        
+
     }
 }
 
@@ -119,4 +125,3 @@
         font-size: 1.8rem;
     }
 }
-
