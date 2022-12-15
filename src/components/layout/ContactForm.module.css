@@ -1,0 +1,126 @@
+.form {
+    margin: 5rem 0 4rem 0;
+}
+
+.form-box {
+    display: flex;
+}
+
+.form-box .form-wrapper:first-child,
+.form-box .form-wrapper-invalid:first-child {
+    margin-right: 1rem;
+}
+
+/* ----- */
+.form-wrapper,
+.form-wrapper-invalid {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.form-wrapper-button {
+    width: 100%;
+    text-align: center;
+}
+
+.form-wrapper label,
+.form-wrapper-invalid label {
+    color: #2d2a2a;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.form-wrapper input {
+    width: 100%;
+    border: 1px solid #dcd5cf;
+    border-radius: 2px;
+    height: 4.8rem;
+    color: #2d2a2a;
+    padding: 0 1rem;
+    /* font-size: 1.6rem; */
+}
+
+.form-wrapper-invalid input {
+    width: 100%;
+    border: 1px solid #e99292;
+    border-radius: 2px;
+    height: 4.8rem;
+    color: #2d2a2a;
+    padding: 0 1rem;
+    /* font-size: 1.6rem; */
+}
+
+.form-wrapper input:focus,
+.form-wrapper-invalid input:focus,
+.form textarea:focus {
+    /* outline-color: var(--color-primary); */
+    outline: none;
+    border: 2px solid var(--color-primary);
+}
+
+.subject {
+    height: 4.8rem;
+    width: 100%;
+    border: 1px solid #dcd5cf;
+}
+
+.subject:focus {
+    outline: none;
+    border: 2px solid var(--color-primary);
+}
+
+.form-wrapper-invalid .subject {
+    border: 1px solid #e99292;
+}
+
+textarea::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: #2d2a2a;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.form-wrapper textarea {
+    width: 100%;
+    border: 1px solid #dcd5cf;
+    padding: 1rem;
+}
+
+.form-wrapper-invalid textarea {
+    width: 100%;
+    border: 1px solid #e99292;
+    padding: 1rem;
+}
+
+.form button {
+    border: none;
+    background-color: var(--color-primary);
+    padding: 1.7rem 5rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.error-text {
+    background-color: #cc3b3b;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 23px;
+    margin: 12px 0;
+    padding: 5px 1px 3px 1px;
+}
+
+.error-button-text {
+    font-size: 13px;
+    padding: .7rem;
+    color: #2d2a2a;
+}
+
+@media only screen and (max-width: 622px) {
+    .form-box {
+        flex-direction: column;
+    }
+}
