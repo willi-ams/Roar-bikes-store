@@ -111,4 +111,20 @@
     .newsletter p {
         font-size: 1.2rem;
     }
+
+    .form-subscribe {
+        display: block;
+    }
+
+    .form-subscribe input {
+        width: 100%;
+        display: block;
+        font-size: 1.3rem;
+        margin-right: 0;
+        margin-bottom: 1.2rem;
+    }
+
+    .form-subscribe button {
+        width: 100%;
+    }
 }
